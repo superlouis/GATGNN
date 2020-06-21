@@ -28,4 +28,9 @@ pip install --verbose --no-cache-dir torch-cluster
 pip install --verbose --no-cache-dir torch-spline-conv (optional)
 pip install torch-geometric
 ```
+## Dataset
+* Download the compressed file from the link below and then unzip it in the working directory .<br />*
+[link to download dataset]("https://widgets.figshare.com/articles/12522524/embed?show_title=1")
+
 ## Run
+
