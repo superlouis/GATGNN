@@ -2,4 +2,4 @@
 Pytorch Repository for GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION
 
 
-![ScreenShot](\image\GATGNN.png)
+![ScreenShot](https://raw.githubusercontent.com/image/GATGNN.png)
