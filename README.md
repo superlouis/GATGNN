@@ -29,8 +29,9 @@ pip install --verbose --no-cache-dir torch-spline-conv (optional)
 pip install torch-geometric
 ```
 ## Dataset
-* Download the compressed file from the link below and then unzip it in the working directory .<br />*
-[link to download dataset](https://widgets.figshare.com/articles/12522524/embed?show_title=1)
+1. Download the compressed file of our dataset using [this link](https://widgets.figshare.com/articles/12522524/embed?show_title=1)
+2. Unzip its content ( a directory named 'DATA')
+3. Move the DATA directory in your GATGNN directory. i.e. such that the path GATGNN/DATA exists
 
 ## Run
 
