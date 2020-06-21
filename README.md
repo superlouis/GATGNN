@@ -4,7 +4,7 @@ by [Steph-Yves Louis](http://mleg.cse.sc.edu/people.html), et. al. ...
 ![](front-pic.png)
 
 ## Installation
-Please install those relevant packages if not already installed:
+Install any of the relevant packages if not already installed:
 * Pytorch (tested on 1.2.0) - preferably version 1.2.0 or later
 * Numpy   (tested on 1.17.3)
 * Pandas  (tested on 0.21.3) 
@@ -12,8 +12,7 @@ Please install those relevant packages if not already installed:
 * Pytmatgen (tested on 2019.10.16)
 * PyTorch-Geometric (tested on 1.1.2)
 
-
-- Install Pytorch, Numpy, Pandas, Scikit-learn, Pymatgen, and Pytorch-Geometric
+- Pytorch, Numpy, Pandas, Scikit-learn, and Pymatgen
 ```bash
 pip install torch torchvision 
 pip install numpy
@@ -21,7 +20,7 @@ pip install pandas
 pip install scikit-learn
 pip install pymatgen
 ```
-- Install PyTorch Geometric (tested on 1.1.2), please refer to the offical website for further details
+- PyTorch Geometric 
 ```bash
 pip install --verbose --no-cache-dir torch-scatter
 pip install --verbose --no-cache-dir torch-sparse
@@ -29,6 +28,4 @@ pip install --verbose --no-cache-dir torch-cluster
 pip install --verbose --no-cache-dir torch-spline-conv (optional)
 pip install torch-geometric
 ```
-- Install networkx (tested on 2.3), make sure you are not using networkx 1.x version!
-```bash
-pip install networkx
+## Run
