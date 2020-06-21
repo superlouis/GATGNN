@@ -31,7 +31,12 @@ pip install torch-geometric
 ## Dataset
 1. Download the compressed file of our dataset using [this link](https://widgets.figshare.com/articles/12522524/embed?show_title=1)
 2. Unzip its content ( a directory named 'DATA')
-3. Move the DATA directory in your GATGNN directory. i.e. such that the path GATGNN/DATA exists
+3. Move the DATA directory in your GATGNN directory. i.e. such that the path GATGNN/DATA now exists.
 
 ## Run
+Once all the aforementionned requirements are satisfied, one can easily run our module using our train.py and evaluate.py files. As of now, one can readily train and evaluate a model for any of the 7 properties for which we reported our state of the performance. *see results section below* <br />*
+__1. train.py__  Use it to train a new model on a given property. <br />*
+__2. evaluate.py__ Use it to evaluate a trained model's performance on a given property. <br />*
 
+#### -Instructions to train a new model
+a) using your terminal, provide the arguments of 
