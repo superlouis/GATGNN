@@ -4,21 +4,22 @@ by [Steph-Yves Louis](http://mleg.cse.sc.edu/people.html), et. al. ...
 ![](front-pic.png)
 
 ## Installation
-- Install PyTorch (tested on 1.2.0), preferably version 1.2.0 or later
+Please install those relevant packages if not already installed:
+* Pytorch (tested on 1.2.0) - preferably version 1.2.0 or later
+* Numpy   (tested on 1.17.3)
+* Pandas  (tested on 0.21.3) 
+* Scikit-learn (tested on 0.21.3) 
+* Pytmatgen (tested on 2019.10.16)
+* PyTorch-Geometric (tested on 1.1.2)
+
+
+- Install Pytorch, Numpy, Pandas, Scikit-learn, Pymatgen, and Pytorch-Geometric
 ```bash
 pip install torch torchvision 
-```
-- Install Numpy (tested on 1.17.3) 
-```bash
 pip install numpy
-```
-- Install Pandas (tested on 0.21.3) 
-```bash
 pip install pandas
-```
-- Install Scikit-learn (tested on 0.21.3) 
-```bash
 pip install scikit-learn
+pip install pymatgen
 ```
 - Install PyTorch Geometric (tested on 1.1.2), please refer to the offical website for further details
 ```bash
