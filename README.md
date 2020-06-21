@@ -3,5 +3,5 @@ Pytorch Repository for GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORK
 
 
 <p>
-    <img src="img/GATGNN.png" width="220" height="240" />
+    <img src="image/GATGNN.png" width="220" height="240" />
 </p>
