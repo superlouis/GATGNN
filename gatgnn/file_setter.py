@@ -34,7 +34,7 @@ def save_properties():
     exit()
 
 
-def use_property(property_name,source):
+def use_property(property_name,source, do_prediction = False):
 
     print('> Preparing dataset to use for Property Prediction. Please wait ...')
 
@@ -74,9 +74,10 @@ def use_property(property_name,source):
         df        = df[df.material_id.isin(use_ids)]
         CIF_dict  = {'radius':4,'step':0.5,'max_num_nbr':16}
 
+
     # ADDITIONAL CLEANING
     if p in [3,4]:
         df        = df[df.value>0]
     df.to_csv('DATA/CIF-DATA/id_prop.csv',index=False,header=False)
-    print(f'> Dataset for {source}---{property_name} ready !\n\n')
+    if not do_prediction:    print(f'> Dataset for {source}---{property_name} ready !\n\n')
     return source,num_T,CIF_dict
