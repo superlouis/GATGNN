@@ -1,3 +1,8 @@
+# Table of Contents
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Usage](#usage)
+
 # GATGNN
 
 This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
@@ -11,7 +16,9 @@ Band Gap | 0.31 | eV
 Bulk-Moduli | 0.045 | log(GPa)
 Shear-Moduli | 0.075 | log(GPa)
 Poisson-ratio | 0.029 | -
-
+   
+<a name="introduction"></a>
+# Introduction
 The package provides 3 major functions:
 
 - Train a GATGNN model for either of the 7 properties referenced above.
@@ -26,7 +33,7 @@ How to cite:<br />
 Steph-Yves Louis, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
 
 ![](front-pic.png)
-
+<a name="installation"></a>
 ## Installation
 Install any of the relevant packages if not already installed:
 * Pytorch (tested on 1.2.0) - preferably version 1.2.0 or later
@@ -57,6 +64,7 @@ pip install torch-geometric
 2. Unzip its content ( a directory named 'DATA')
 3. Move the DATA directory in your GATGNN directory. i.e. such that the path GATGNN/DATA now exists.
 
+<a name="usage"></a>
 ## Usage
 #### Training a new model
 Once all the aforementionned requirements are satisfied, one can easily train a new GATGNN by running __train.py__ in the terminal along with the specification of the appropriate flags. At the bare minimum, using --property to specify the property and --data_src to identify the dataset (CGCNN or MEGNET) should be enough to train a robust GATGNN model.
