@@ -81,7 +81,7 @@ python train.py --property shear-modulus --data_src MEGNET
 - Example-3. Train a model with 5 layers on the bulk-modulus property using the CGCNN dataset and the global attention technique of fixed cluster unpooling (GI M-2).
 ```bash
 python train.py --property bulk-modulus --data_src CGCNN --num_layers 5 --global_attention cluster --cluster_option fixed
-```
+``` 
 The trained model will be automatically saved under the TRAINED directory. *Pay attention to the flags used for they will be needed again to evaluate the model.
 
 #### Evaluating the performance of a trained model
