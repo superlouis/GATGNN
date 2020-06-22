@@ -88,5 +88,15 @@ python evaluate.py --property shear-modulus --data_src MEGNET
 ```bash
 python evaluate.py --property bulk-modulus --data_src CGCNN --num_layers 5 --global_attention cluster --cluster_option fixed
 ```
-
-
+#### Predicting the property of a single inorganic material using its .cif file
+Again, using a trained model one can also predict the property of a single inorganic material using its .cif file. Just follow those 2 steps:
+1. Place your .cif file inside the directory DATA/prediction-directory/
+1. Run __predict.py__ in a similar fashion as __evaluate.py__ except for the addition of the flag --to_predict which specifies the name of the .cif file.
+- Example-1. Predict the bulk-modulus property of a material named mp-1 using the CGCNN graph constructing specifications.
+```bash
+python predict.py --property bulk-modulus --data_src CGCNN --to_predict mp-1
+```
+- Example-2. Predict the shear-modulus property of a material named mp-1 using the MEGNET graph constructing specifications.
+```bash
+python predict.py --property shear-modulus --data_src MEGNET --to_predict mp-1
+```
