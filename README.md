@@ -1,4 +1,4 @@
-# GATGNN:  Global Attention based Graph Neural Network
+# GATGNN
 
 This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
 
@@ -22,7 +22,6 @@ The following paper describes the details of the our framework:
 [GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION](https://arxiv.org/pdf/2003.13379.pdf)
 
 Machine Learning and Evolution Laboratory, University of South Carolina <br />
-
 How to cite:<br />
 Steph-Yves Louis, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
 
@@ -73,12 +72,21 @@ python train.py --property shear-modulus --data_src MEGNET
 ```bash
 python train.py --property bulk-modulus --data_src CGCNN --num_layers 5 --global_attention cluster --cluster_option fixed
 ```
-The trained model will be automatically saved under the TRAINED directory.
+The trained model will be automatically saved under the TRAINED directory. *Pay attention to the flags used for they will be needed again to evaluate the model.
 
 #### Evaluating the performance of a trained model
-module using our train.py and evaluate.py files. As of now, one can readily train and evaluate a model for any of the 7 properties for which we reported our state of the performance. *see results section below* <br />*
-__1. train.py__  Use it to train a new model on a given property. <br />*
-__2. evaluate.py__ Use it to evaluate a trained model's performance on a given property. <br />*
-
+Upon training a GATGNN, one can evaluate its performance using __evaluate.py__ in the terminal exactly the same way as __train.py__. *It is IMPORTANT that one runs __evaluate.py__ with the exact same flags as it was done when prior training the model.*
+- Example-1. Evaluate the performance of a model trained on the bulk-modulus property using the CGCNN dataset.
+```bash
+python evaluate.py --property bulk-modulus --data_src CGCNN
+```
+- Example-2. Evaluate the performance of a model trained on the shear-modulus property using the MEGNET dataset.
+```bash
+python evaluate.py --property shear-modulus --data_src MEGNET
+```
+- Example-3.  Evaluate the performance of a model trained with 5 layers on the bulk-modulus property using the CGCNN dataset and the global attention technique of fixed cluster unpooling (GI M-2).
+```bash
+python evaluate.py --property bulk-modulus --data_src CGCNN --num_layers 5 --global_attention cluster --cluster_option fixed
+```
 
 
