@@ -21,17 +21,11 @@ The package provides 3 major functions:
 The following paper describes the details of the our framework:
 [GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION](https://arxiv.org/pdf/2003.13379.pdf)
 
-Machine Learning and Evolution Laboratory
-
-University of South Carolina
-
-How to cite:
+Machine Learning and Evolution Laboratory, University of South Carolina <br />
+How to cite:<br />
 Louis, Steph-Yves, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
 
-
 ![](front-pic.png)
-
-
 
 ## Installation
 Install any of the relevant packages if not already installed:
