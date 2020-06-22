@@ -1,7 +1,7 @@
 # GATGNN: Global Attention Graph Neural Network
 This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
 
-Machine Learning and Evolution Laboratory, University of South Carolina <br />
+[Machine Learning and Evolution Laboratory](http://mleg.cse.sc.edu), University of South Carolina <br />
 How to cite:<br />
 Steph-Yves Louis, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
 
