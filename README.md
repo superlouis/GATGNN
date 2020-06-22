@@ -2,7 +2,6 @@
 
 This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
 
-
 Property | MAE Performance of our model| Units
 ------------ | ------------- | -------------
 Formation Energy | 0.039 | eV/atom
@@ -15,13 +14,11 @@ Poisson-ratio | 0.029 | -
 
 The package provides 3 major functions:
 
-- Train a GATGNN model for either of the 6 properties referenced .
-- Evaluate a trained GATGNN model for either of the 6 properties tested in our paper.
-Predict material properties of new crystals with a pre-trained CGCNN model.
-The following paper describes the details of the CGCNN framework:
+- Train a GATGNN model for either of the 7 properties referenced above.
+- Evaluate the performance of a trained GATGNN model on either of the 7 properties referenced above.
+- Predict the property of a given material using its cif file. 
 
-Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties
-
+The following paper describes the details of the our framework:
 [GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION](https://arxiv.org/pdf/2003.13379.pdf)
 
 Machine Learning and Evolution Laboratory
