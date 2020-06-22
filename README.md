@@ -1,7 +1,7 @@
 # Table of Contents
 * [Introduction](#introduction)
 * [Installation](#installation)
-* [Dataset](#installation)
+* [Dataset](#dataset)
 * [Usage](#usage)
 
 # GATGNN
