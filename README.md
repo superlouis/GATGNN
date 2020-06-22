@@ -2,12 +2,14 @@
 Official Pytorch repository for our paper *
 
 [GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION](https://arxiv.org/pdf/2003.13379.pdf)
-by [Steph-Yves Louis](http://mleg.cse.sc.edu/people.html), et. al. ... 
-![](front-pic.png)
-
-Citation:
+How to cite:
 
 Louis, Steph-Yves, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
+
+
+![](front-pic.png)
+
+
 
 ## Installation
 Install any of the relevant packages if not already installed:
