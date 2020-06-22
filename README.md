@@ -1,6 +1,7 @@
 # Table of Contents
 * [Introduction](#introduction)
 * [Installation](#installation)
+* [Dataset](#installation)
 * [Usage](#usage)
 
 # GATGNN
@@ -59,6 +60,7 @@ pip install --verbose --no-cache-dir torch-cluster
 pip install --verbose --no-cache-dir torch-spline-conv (optional)
 pip install torch-geometric
 ```
+<a name="dataset"></a>
 ## Dataset
 1. Download the compressed file of our dataset using [this link](https://widgets.figshare.com/articles/12522524/embed?show_title=1)
 2. Unzip its content ( a directory named 'DATA')
