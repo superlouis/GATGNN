@@ -58,7 +58,7 @@ pip install pandas
 pip install scikit-learn
 pip install pymatgen
 ```
-- PyTorch Geometric 
+- PyTorch Geometric [documentation](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 ```bash
 pip install --verbose --no-cache-dir torch-scatter
 pip install --verbose --no-cache-dir torch-sparse
