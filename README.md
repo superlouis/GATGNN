@@ -3,7 +3,8 @@ Official Pytorch repository for our paper *
 
 [GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION](https://arxiv.org/pdf/2003.13379.pdf)
 
-Machine Learning and Evolution Laboratory\\
+Machine Learning and Evolution Laboratory
+
 University of South Carolina
 
 How to cite:
