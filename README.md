@@ -23,7 +23,7 @@ The following paper describes the details of the our framework:
 
 Machine Learning and Evolution Laboratory, University of South Carolina <br />
 How to cite:<br />
-Louis, Steph-Yves, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
+Steph-Yves Louis, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
 
 ![](front-pic.png)
 
@@ -68,9 +68,15 @@ python train.py --property bulk-modulus --data_src CGCNN
 ```bash
 python train.py --property shear-modulus --data_src MEGNET
 ```
+- Example-3. Train a model with 5 layers on the bulk-modulus property using the CGCNN dataset and the global attention technique of fixed cluster unpooling (GI M-2).
+```bash
+python train.py --property bulk-modulus --data_src CGCNN --num_layers 5 --global_attention cluster --cluster_option fixed
+```
+The trained model will be automatically saved under the TRAINED directory.
+
+#### Evaluating the performance of a trained model
 module using our train.py and evaluate.py files. As of now, one can readily train and evaluate a model for any of the 7 properties for which we reported our state of the performance. *see results section below* <br />*
 __1. train.py__  Use it to train a new model on a given property. <br />*
 __2. evaluate.py__ Use it to evaluate a trained model's performance on a given property. <br />*
 
-#### -Instructions to train a new model
-a) using your terminal, provide the arguments of 
+
