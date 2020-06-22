@@ -1,5 +1,26 @@
 # GATGNN
-Official Pytorch repository for our paper *
+
+This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
+
+
+Property | MAE Performance of our model| Units
+------------ | ------------- | -------------
+Formation Energy | 0.039 | eV/atom
+Absolute Energy | 0.048 | eV/atom
+Fermi Energy | 0.33 | eV/atom
+Band Gap | 0.31 | eV
+Bulk-Moduli | 0.045 | log(GPa)
+Shear-Moduli | 0.075 | log(GPa)
+Poisson-ratio | 0.029 | -
+
+The package provides 3 major functions:
+
+- Train a GATGNN model for either of the 6 properties referenced .
+- Evaluate a trained GATGNN model for either of the 6 properties tested in our paper.
+Predict material properties of new crystals with a pre-trained CGCNN model.
+The following paper describes the details of the CGCNN framework:
+
+Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties
 
 [GLOBAL ATTENTION BASED GRAPH CONVOLUTIONAL NEURAL NETWORKS FOR IMPROVED MATERIALS PROPERTY PREDICTION](https://arxiv.org/pdf/2003.13379.pdf)
 
