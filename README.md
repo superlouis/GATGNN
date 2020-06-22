@@ -57,8 +57,18 @@ pip install torch-geometric
 2. Unzip its content ( a directory named 'DATA')
 3. Move the DATA directory in your GATGNN directory. i.e. such that the path GATGNN/DATA now exists.
 
-## Run
-Once all the aforementionned requirements are satisfied, one can easily run our module using our train.py and evaluate.py files. As of now, one can readily train and evaluate a model for any of the 7 properties for which we reported our state of the performance. *see results section below* <br />*
+## Usage
+#### Training a new model
+Once all the aforementionned requirements are satisfied, one can easily train a new GATGNN by running __train.py__ in the terminal along with the specification of the appropriate flags. At the bare minimum, using --property to specify the property and --data_src to identify the dataset (CGCNN or MEGNET) should be enough to train a robust GATGNN model.
+- Example-1. Train a model on the bulk-modulus property using the CGCNN dataset.
+```bash
+python train.py --property bulk-modulus --data_src CGCNN
+```
+- Example-2. Train a model on the shear-modulus property using the MEGNET dataset.
+```bash
+python train.py --property shear-modulus --data_src MEGNET
+```
+module using our train.py and evaluate.py files. As of now, one can readily train and evaluate a model for any of the 7 properties for which we reported our state of the performance. *see results section below* <br />*
 __1. train.py__  Use it to train a new model on a given property. <br />*
 __2. evaluate.py__ Use it to evaluate a trained model's performance on a given property. <br />*
 
