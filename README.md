@@ -1,12 +1,14 @@
+# GATGNN: Global Attention Graph Neural Network
+This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
+
+
 # Table of Contents
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Dataset](#dataset)
 * [Usage](#usage)
 
-# GATGNN: Global Attention Graph Neural Network
 
-This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository.
 
 Property | MAE Performance of our model| Units
 ------------ | ------------- | -------------
