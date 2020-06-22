@@ -9,7 +9,7 @@ This software package implements our developed model GATGNN for improved inorgan
 * [Usage](#usage)
 
 
-
+# Performance summary
 Property | MAE Performance of our model| Units
 ------------ | ------------- | -------------
 Formation Energy | 0.039 | eV/atom
