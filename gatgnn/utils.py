@@ -11,7 +11,7 @@ from   tabulate import tabulate
 import random,time
 
 def set_model_properties(crystal_property):
-    if crystal_property   in ['poisson-ratio','band-gap','absolute-energy','fermi-energy','formation-energy']        :
+    if crystal_property   in ['poisson-ratio','band-gap','absolute-energy','fermi-energy','formation-energy','new-property']        :
         norm_action   = None;classification = None
     elif crystal_property == 'is_metal':
         norm_action   = 'classification-1';classification = 1
@@ -48,25 +48,3 @@ def output_training(metrics_obj,epoch,estop_val,extra='---'):
 def load_metrics():
     saved_metrics = pickle.load(open("MODELS/metrics_.pickle", "rb", -1))
     return saved_metrics
-
-def make_full_dataset():
-    cgcnn   = pd.read_csv('DATA/cgcnn_data.csv')
-    megnet  = pd.read_csv('DATA/megnet_data.csv')
-
-    full_df = pd.concat([cgcnn,megnet]).drop_duplicates(subset='material_id')
-    full_df = full_df[['pretty_formula', 'fermi_e', 'absolute_e', 'formation_e','shear_moduli', 'poisson_ratio', 'bulk_moduli', 'band_gap','material_id']]
-    full_df.to_csv('DATA/data_set.csv',index=False)
-
-def make_is_metal(threshold=0):
-    '''
-    https://pubs.acs.org/doi/pdf/10.1021/acs.jpclett.8b00124
-    '''
-    data_path      = 'DATA/data_set.csv'
-    df             = pd.read_csv(f'{data_path}')
-    df['is_metal'] = [np.nan]*len(df)
-    df['is_metal'] = np.where((df.band_gap <= threshold),1,df.is_metal)
-    df['is_metal'] = np.where((df.band_gap >  threshold),0,df.is_metal)
-
-    df.to_csv(data_path,index=False)
-    print('> Updated metallic property of data-set')
-    exit()   
