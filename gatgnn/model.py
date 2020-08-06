@@ -184,7 +184,7 @@ class GATGNN(torch.nn.Module):
         self.neg_slope      = 0.2  
 
         self.embed_n        = Linear(92,n_h)
-        self.embed_e        = Linear(41,n_h) if edge_format == 'CGCNN' else Linear(9,n_h)
+        self.embed_e        = Linear(41,n_h) if edge_format in ['CGCNN','NEW'] else Linear(9,n_h)
         self.embed_comp     = Linear(103,n_h)
  
         self.node_att       = nn.ModuleList([GAT_Crystal(n_h,n_h,n_h,self.n_heads) for i in range(nl)])
@@ -234,5 +234,3 @@ class GATGNN(torch.nn.Module):
         if self.classification: y = self.out(y)
         else:                   y = self.out(y).squeeze()
         return y
-
-
