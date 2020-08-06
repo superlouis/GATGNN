@@ -213,7 +213,7 @@ class CIF_Lister(Dataset):
 
         n_features    = material[0][0]
         e_features    = material[0][1]
-        e_features    = e_features.view(-1,41) if self.src == 'CGCNN' else e_features.view(-1,9)
+        e_features    = e_features.view(-1,41) if self.src in ['CGCNN','NEW'] else e_features.view(-1,9)
         a_matrix      = material[0][2]
 
         groups        = material[1]
@@ -245,6 +245,7 @@ class CIF_Dataset(Dataset):
         self.clusterizer   = SPCL(n_clusters=cls_num, random_state=None,assign_labels='discretize')
         self.clusterizer2  = KMeans(n_clusters=cls_num, random_state=None)
         self.encoder_elem  = ELEM_Encoder()
+        self.update_root   = None
 
     def __len__(self):
         return len(self.partial_data)
