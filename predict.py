@@ -9,9 +9,9 @@ parser = argparse.ArgumentParser(description='GATGNN')
 parser.add_argument('--property', default='bulk-modulus',
                     choices=['absolute-energy','band-gap','bulk-modulus',
                              'fermi-energy','formation-energy',
-                             'poisson-ratio','shear-modulus'],
+                             'poisson-ratio','shear-modulus','new-property'],
                     help='material property to train (default: bulk-modulus)')
-parser.add_argument('--data_src', default='CGCNN',choices=['CGCNN','MEGNET'],
+parser.add_argument('--data_src', default='CGCNN',choices=['CGCNN','MEGNET','NEW'],
                     help='selection of the materials dataset to use (default: CGCNN)')
 parser.add_argument('--to_predict', default='mp-1', help='name or id of cif material whose property to predict')
 
@@ -30,7 +30,8 @@ parser.add_argument('--cluster_option',default='fixed', choices=['fixed','random
                     help='selection of the cluster unpooling strategy referenced in paper GI M-1 to GI M-4 (default: fixed)')
 parser.add_argument('--concat_comp',default=False, type=bool,
                     help='option to re-use vector of elemental composition after global summation of crystal feature.(default: False)')
-
+parser.add_argument('--train_size',default=0.8, type=float,
+                    help='ratio size of the training-set (default:0.8)')
 args = parser.parse_args(sys.argv[1:])
 
 # GATGNN --- parameters
