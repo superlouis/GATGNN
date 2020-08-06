@@ -9,9 +9,9 @@ parser = argparse.ArgumentParser(description='GATGNN')
 parser.add_argument('--property', default='bulk-modulus',
                     choices=['absolute-energy','band-gap','bulk-modulus',
                              'fermi-energy','formation-energy',
-                             'poisson-ratio','shear-modulus'],
+                             'poisson-ratio','shear-modulus','new-property'],
                     help='material property to train (default: bulk-modulus)')
-parser.add_argument('--data_src', default='CGCNN',choices=['CGCNN','MEGNET'],
+parser.add_argument('--data_src', default='CGCNN',choices=['CGCNN','MEGNET','NEW'],
                     help='selection of the materials dataset to use (default: CGCNN)')
 
 # MOST CRUCIAL MODEL PARAMETERS
@@ -29,15 +29,17 @@ parser.add_argument('--cluster_option',default='fixed', choices=['fixed','random
                     help='selection of the cluster unpooling strategy referenced in paper GI M-1 to GI M-4 (default: fixed)')
 parser.add_argument('--concat_comp',default=False, type=bool,
                     help='option to re-use vector of elemental composition after global summation of crystal feature.(default: False)')
-
+parser.add_argument('--train_size',default=0.8, type=float,
+                    help='ratio size of the training-set (default:0.8)')
 args = parser.parse_args(sys.argv[1:])
 
 
 # GATGNN --- parameters
-crystal_property                     = args.property
-data_src                             = args.data_src
-source_comparison, training_num,RSM  = use_property(crystal_property,data_src)
-norm_action, classification          = set_model_properties(crystal_property)
+crystal_property                      = args.property
+data_src                              = args.data_src
+source_comparison, training_num,RSM   = use_property(crystal_property,data_src)
+norm_action, classification           = set_model_properties(crystal_property)
+if training_num == None: training_num = args.train_size
 
 number_layers                        = args.num_layers
 number_neurons                       = args.num_neurons
@@ -55,7 +57,7 @@ device = torch.device(f'cuda:{gpu_id}' if torch.cuda.is_available() else 'cpu')
 random_num          =  456;random.seed(random_num)
 
 # MODEL HYPER-PARAMETERS
-num_epochs      = 500
+num_epochs      = 200
 learning_rate   = 5e-3
 batch_size      = 256
 
@@ -148,3 +150,4 @@ for epoch in range(num_epochs):
         break
 # SAVING MODEL
 print(f"> DONE TRAINING !")
+shutil.copy2('TRAINED/crystal-checkpoint.pt', f'TRAINED/{crystal_property}.pt')
