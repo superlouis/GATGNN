@@ -69,10 +69,11 @@ milestones      = [150,250]
 test_param      = {'batch_size':256, 'shuffle': False}
 
 # DATALOADER/ TARGET NORMALIZATION
-dataset         = pd.read_csv('DATA/CIF-DATA/id_prop.csv',names=['material_ids','label']).sample(frac=1,random_state=random_num)
+src_CIF         = 'CIF-DATA_NEW' if data_src == 'NEW' else 'CIF-DATA'
+dataset         = pd.read_csv(f'DATA/{src_CIF}/id_prop.csv',names=['material_ids','label']).sample(frac=1,random_state=random_num)
 NORMALIZER      = DATA_normalizer(dataset.label.values)
 
-CRYSTAL_DATA    = CIF_Dataset(dataset,**RSM)
+CRYSTAL_DATA    = CIF_Dataset(dataset, root_dir = f'DATA/{src_CIF}/',**RSM)
 idx_list        = list(range(len(dataset)))
 random.shuffle(idx_list)
 
