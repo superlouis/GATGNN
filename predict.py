@@ -65,7 +65,7 @@ dataset['material_ids'] = [material_name]
 dataset['label']        = [0.00001]
 NORMALIZER              = DATA_normalizer(dataset.label.values)
 
-CRYSTAL_DATA          = CIF_Dataset(dataset,**RSM)
+CRYSTAL_DATA          = CIF_Dataset(dataset, root_dir = f'DATA/{src_CIF}/',**RSM)
 CRYSTAL_DATA.root_dir = 'DATA/prediction-directory'
 test_idx              = list(range(len(dataset)))
 testing_set           = CIF_Lister(test_idx,CRYSTAL_DATA,NORMALIZER,norm_action, df=dataset,src=data_src)
