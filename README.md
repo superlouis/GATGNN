@@ -121,7 +121,7 @@ python predict.py --property shear-modulus --data_src MEGNET --to_predict mp-1
 ## Usage for custom property & custom Dataset
 Once you've followed the steps to download and unzip the dataset, follow the 3 following steps:
 1. Place all of your .cif files in the directory DATA/CIF-DATA_NEW
-1. First format your .csv property dataset so it only has 2 columns (ID, value). Your file should look like anyone of our .csv files located in the the directory DATA/properties_reference/
+1. First format your .csv property dataset so it only has 2 columns (ID, value). Your file should look like anyone of our .csv files located in the the directory DATA/properties-reference/
 1. Once your .csv property dataset is correctly formatted, rename your file as newproperty.csv and place it in the DATA/properties_reference/ directory. 
 
 With the 3 steps above complete, you are now ready to use our GATGNN on your own dataset. To either [train](#usage), [evaluate](#usage), or even [predict](#usage) your own property, refer to the instructions listed in the [Usage](#usage) section. Just use new-property, NEW, and any ratio (like 0.75) as values for the --property flag, --data_src flag, and --train_size flag. 3 examples are provided below
