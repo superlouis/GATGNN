@@ -6,7 +6,7 @@ Department of Computer Science and Engineering <br />
 University of South Carolina <br />
 
 How to cite:<br />
-Steph-Yves Louis, Yong Zhao, Alireza Nasiri, Xiran Wong, Yuqi Song, Fei Liu, and Jianjun Hu. "Global Attention based Graph Convolutional Neural Networks for Improved Materials Property Prediction." arXiv preprint arXiv:2003.13379 (2020).
+Louis, Steph-Yves, Yong Zhao, Alireza Nasiri, Xiran Wang, Yuqi Song, Fei Liu, and Jianjun Hu. "Graph convolutional neural networks with global attention for improved materials property prediction." Physical chemistry chemical physics: PCCP.
 
 # Table of Contents
 * [Introduction](#introduction)
