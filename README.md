@@ -58,14 +58,8 @@ pip install pandas
 pip install scikit-learn
 pip install pymatgen
 ```
-- PyTorch Geometric [documentation](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
-```bash
-pip install --verbose --no-cache-dir torch-scatter
-pip install --verbose --no-cache-dir torch-sparse
-pip install --verbose --no-cache-dir torch-cluster
-pip install --verbose --no-cache-dir torch-spline-conv (optional)
-pip install torch-geometric
-```
+- PyTorch Geometric (1.4.3) [documentation](https://pytorch-geometric.readthedocs.io/en/1.4.3/notes/installation.html#installation). *our codes are compatible with version up to 1.4.3*
+
 <a name="dataset"></a>
 ## Dataset
 1. Download the compressed file of our dataset using [this link](https://widgets.figshare.com/articles/12522524/embed?show_title=1)
