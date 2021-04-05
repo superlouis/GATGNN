@@ -155,14 +155,15 @@ class GAT_Crystal(MessagePassing):
 
         alpha = F.softplus((torch.cat([x_i, x_j], dim=-1)*self.att).sum(dim=-1))
         alpha = F.softplus(self.bn1(alpha))
-        alpha = softmax(alpha, edge_index_i, size_i)
+        alpha = softmax(alpha,edge_index_i)
 
         alpha = F.dropout(alpha, p=self.dropout, training=self.training)
-        return x_j * alpha.view(-1, self.heads, 1)
+        x_j   = (x_j * alpha.view(-1, self.heads, 1)).transpose(0,1)
+        return x_j
 
     def update(self, aggr_out,x):
         if self.concat is True:    aggr_out = aggr_out.view(-1, self.heads * self.out_features)
-        else:                      aggr_out = aggr_out.mean(dim=1)
+        else:                      aggr_out = aggr_out.mean(dim=0)
         if self.bias is not None:  aggr_out = aggr_out + self.bias
         return aggr_out
 
