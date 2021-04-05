@@ -58,7 +58,7 @@ pip install pandas
 pip install scikit-learn
 pip install pymatgen
 ```
-- PyTorch Geometric (1.4.3) [documentation](https://pytorch-geometric.readthedocs.io/en/1.4.3/notes/installation.html#installation). *our codes are compatible with version up to 1.4.3*
+- PyTorch Geometric (1.6.1) [documentation](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html). *our codes are compatible with version up to 1.6.\**
 
 <a name="dataset"></a>
 ## Dataset
