@@ -60,6 +60,7 @@ batch_size      = 256
 test_param      = {'batch_size':batch_size, 'shuffle': False}
 
 # DATALOADER/ TARGET NORMALIZATION
+src_CIF                 = 'CIF-DATA_NEW' if data_src == 'NEW' else 'CIF-DATA'
 dataset                 = pd.DataFrame()
 dataset['material_ids'] = [material_name]
 dataset['label']        = [0.00001]
