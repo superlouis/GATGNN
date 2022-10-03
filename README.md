@@ -1,7 +1,7 @@
 # GATGNN: Global Attention Graph Neural Network
 This software package implements our developed model GATGNN for improved inorganic materials' property prediction. This is the official Pytorch repository. 
 
-##This model is outdated. If you want to compare with our latest model, check our DeeperGATGNN [here](https://github.com/usccolumbia/deeperGATGNN) which has achieved significantly better performance.
+## This model is outdated. If you want to compare with our latest model, check our DeeperGATGNN [here](https://github.com/usccolumbia/deeperGATGNN) which has achieved significantly better performance.
 
 [Machine Learning and Evolution Laboratory](http://mleg.cse.sc.edu)<br />
 Department of Computer Science and Engineering <br />
